@@ -1,17 +1,23 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use Illuminate\Support\Facades\File;
 
 use Mail;
 use Session;
 use Sentinel;
+use File;
+use Illuminate\Support\Facades\Hash;
 use Activation;
+Use Hash;
+Use File;
 use App\Http\Requests;
 use Centaur\AuthManager;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class RegistrationController extends Controller
+
+
 {
     /** @var Centaur\AuthManager */
     protected $authManager;
@@ -78,7 +84,17 @@ class RegistrationController extends Controller
                     ->subject('Your account has been created');
             }
         );
+		
+		// Kreira root mapu za svakog korisnika prilikom registracije
+		
+		$hashedMap = Hash::make('$result->user->id');
+		File::makeDirectory(base_path("storage/app/maps/users_$hashedMap"), 0755, true, true);
 
+		//Hashirana mapa nakon registracije
+		$hashed_map = sha1('$result->user->email');
+        File::makeDirectory(base_path("storage/app/public/usermaps/$year-$hashed_map"), 0755, true, true);
+		// return $user;
+		
         // Ask the user to check their email for the activation link
         $result->setMessage('Registration complete.  Please check your email for activation instructions.');
 

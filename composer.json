@@ -10,8 +10,14 @@
         "srlabs/centaur": "^3.0",
         "ircmaxell/password-compat": "^1.0",
         "vinkla/hashids": "^2.4",
+<<<<<<< HEAD
         "guzzlehttp/guzzle": "^6.2",
         "league/flysystem-aws-s3-v3": "^1.0"
+=======
+
+        "guzzlehttp/guzzle": "~4.0"
+
+>>>>>>> 37f9f99c65d426ff4beffe082ce1d374e4b764bc
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
