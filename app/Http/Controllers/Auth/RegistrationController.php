@@ -12,6 +12,7 @@ use App\Http\Requests;
 use Centaur\AuthManager;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\UserMap;
 
 
 class RegistrationController extends Controller
@@ -37,6 +38,7 @@ class RegistrationController extends Controller
     public function getRegister()
     {
         return view('auth.register');
+		
     }
 
     /**
@@ -85,7 +87,17 @@ class RegistrationController extends Controller
 		// Kreira root mapu za svakog korisnika prilikom registracije
 		
 		$hashedMap = Hash::make('$result->user->id');
-		File::makeDirectory(base_path("storage/app/maps/users_$hashedMap"), 0755, true, true);
+		
+		File::makeDirectory(storage_path("app/maps/user_$hashedMap"), 0755, true, true);
+		
+		// Pospremi id korisnika i ime mape u bazu
+		
+		$map = new UserMap();
+		
+		$map->name = $hashedMap;
+		$map->users_id = $result->user->id;
+		
+		$map->save();
 		
         // Ask the user to check their email for the activation link
         $result->setMessage('Registration complete.  Please check your email for activation instructions.');
