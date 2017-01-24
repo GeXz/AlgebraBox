@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,11 +14,24 @@ use App\Models\Category;
 class CategoriesController extends Controller
 {
 =======
+=======
+
+>>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Support\Facades\DB;
+use App\Models\Category;
+
+
 
 class CategoriesController extends Controller
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
 	
 >>>>>>> 69a0515a584a7c3776696f7a01a0d672b419637c
 	public function __construct()
@@ -41,12 +55,18 @@ class CategoriesController extends Controller
     public function index()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		new Category;
 		$categories = DB::table('categories')->get();
         return view('user.categories.index', ['categories'=>$categories]);
 =======
         return view('user.categories.index');
 >>>>>>> 69a0515a584a7c3776696f7a01a0d672b419637c
+=======
+		new Category;
+		$categories = DB::table('categories')->get();
+        return view('user.categories.index', ['categories'=>$categories]);	
+>>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
     }
 
     /**
@@ -57,10 +77,14 @@ class CategoriesController extends Controller
     public function create()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return view('user.categories.create');	
 =======
         return view('user.categories.create');
 >>>>>>> 69a0515a584a7c3776696f7a01a0d672b419637c
+=======
+        return view('user.categories.create');	
+>>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
     }
 
     /**
@@ -71,11 +95,15 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
    
    {
 		$this->validate($request, [ 
             'name' => 'bail|required|max:100',
 		]);
+<<<<<<< HEAD
 	
 	    $categories = new Category;
 		$categories->name = $request->category;
@@ -87,23 +115,34 @@ class CategoriesController extends Controller
         //
     }
 >>>>>>> 69a0515a584a7c3776696f7a01a0d672b419637c
+=======
+>>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
 
+	    $categories = new Category;
+		$categories->name = $request->category;
+		$categories->save();   
+    }
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+	 
     public function show($id)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 		//  
    
 =======
         //
 >>>>>>> 69a0515a584a7c3776696f7a01a0d672b419637c
+=======
+		//
+>>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
     }
-
+	
     /**
      * Show the form for editing the specified resource.
      *
@@ -112,7 +151,7 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        //
+		//
     }
 
     /**

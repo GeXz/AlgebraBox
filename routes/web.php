@@ -20,6 +20,7 @@ Route::get('home', ['as' => 'home', 'uses' => 'User\HomeController@index']);
 Route::group(['prefix' => 'user'], function () {
   Route::resource('categories', 'User\CategoriesController');
 <<<<<<< HEAD
+<<<<<<< HEAD
   Route::get('index', ['as' => 'index', 'uses' => 'User\CategoriesController@index']);
   Route::post('create', ['as' => 'create.category', 'uses' => 'User\CategoriesController@store']);
   Route::get('edit', ['as' => 'categories.edit', 'uses' => 'User\CategoriesController@edit']);
@@ -28,6 +29,13 @@ Route::group(['prefix' => 'user'], function () {
 =======
 });
 >>>>>>> 69a0515a584a7c3776696f7a01a0d672b419637c
+=======
+  Route::get('index', ['as' => 'index', 'uses' => 'User\CategoriesController@index']);
+  Route::post('create', ['as' => 'create.category', 'uses' => 'User\CategoriesController@store']);
+  Route::get('edit', ['as' => 'categories.edit', 'uses' => 'User\CategoriesController@edit']); 
+});
+
+>>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
 // Authorization
 Route::get('login', ['as' => 'auth.login.form', 'uses' => 'Auth\SessionController@getLogin']);
 Route::post('login', ['as' => 'auth.login.attempt', 'uses' => 'Auth\SessionController@postLogin']);
@@ -48,6 +56,10 @@ Route::post('password/reset/{code}', ['as' => 'auth.password.reset.attempt', 'us
 Route::get('password/reset', ['as' => 'auth.password.request.form', 'uses' => 'Auth\PasswordController@getRequest']);
 Route::post('password/reset', ['as' => 'auth.password.request.attempt', 'uses' => 'Auth\PasswordController@postRequest']);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
 /*############# ADMIN ##############*/
 Route::group(['prefix' => 'admin'], function () {
   // Dashboard

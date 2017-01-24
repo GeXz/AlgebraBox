@@ -30,6 +30,7 @@
 			</div>
 			<div class="panel-body">
 <<<<<<< HEAD
+<<<<<<< HEAD
 			
 				<ul class="list-group">
 					@foreach($categories as $category)
@@ -52,6 +53,19 @@
 				
 >>>>>>> 69a0515a584a7c3776696f7a01a0d672b419637c
 			</div>
+=======
+			
+			<ul class="list-group">
+				@foreach($categories as $category)
+					<li class="list-group-item">
+				
+					{{$category -> name}}
+					<div class="pull-right">
+						<a href="{{route('categories.edit')}}" class="btn btn-default">
+                    </div>                   
+				@endforeach 
+			</ul>	
+>>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
 		</div>
 	</div>
 </div>
