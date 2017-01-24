@@ -29,6 +29,7 @@
 				</div>
 			</div>
 			<div class="panel-body">
+<<<<<<< HEAD
 			
 			<ul class="list-group">
 				@foreach($categories as $category)
@@ -39,6 +40,10 @@
 					</div>
 				@endforeach 
 			</ul>						
+=======
+				
+			</div>
+>>>>>>> 782450502e9a4602bf19c4c6700b05f36b5721cc
 		</div>
 	</div>
 </div>

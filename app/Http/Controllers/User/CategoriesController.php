@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
@@ -16,6 +17,11 @@ class CategoriesController extends Controller
         // Middleware
         $this->middleware('sentinel.auth');   
 	}
+=======
+
+class CategoriesController extends Controller
+{
+>>>>>>> 782450502e9a4602bf19c4c6700b05f36b5721cc
     /**
      * Display a listing of the resource.
      *
@@ -23,9 +29,13 @@ class CategoriesController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
 		new Category;
 		$categories = DB::table('categories')->get();
 		return view('user.categories.index', ['categories'=>$categories]);
+=======
+        return view('user.categories.index');
+>>>>>>> 782450502e9a4602bf19c4c6700b05f36b5721cc
     }
 
     /**
@@ -35,7 +45,11 @@ class CategoriesController extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
         return view('user.categories.create');		
+=======
+        return view('user.categories.create');
+>>>>>>> 782450502e9a4602bf19c4c6700b05f36b5721cc
     }
 
     /**
@@ -45,6 +59,7 @@ class CategoriesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+<<<<<<< HEAD
    
    {
 		$this->validate($request, [ 
@@ -56,6 +71,12 @@ class CategoriesController extends Controller
 		$categories->save();  
     }
 	
+=======
+    {
+        //
+    }
+
+>>>>>>> 782450502e9a4602bf19c4c6700b05f36b5721cc
     /**
      * Display the specified resource.
      *
@@ -64,9 +85,15 @@ class CategoriesController extends Controller
      */
     public function show($id)
     {
+<<<<<<< HEAD
 		//  
     }
         
+=======
+        //
+    }
+
+>>>>>>> 782450502e9a4602bf19c4c6700b05f36b5721cc
     /**
      * Show the form for editing the specified resource.
      *
@@ -74,8 +101,13 @@ class CategoriesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
+<<<<<<< HEAD
     {	
 		//
+=======
+    {
+        //
+>>>>>>> 782450502e9a4602bf19c4c6700b05f36b5721cc
     }
 
     /**
@@ -85,7 +117,10 @@ class CategoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
 	 
+=======
+>>>>>>> 782450502e9a4602bf19c4c6700b05f36b5721cc
     public function update(Request $request, $id)
     {
         //
