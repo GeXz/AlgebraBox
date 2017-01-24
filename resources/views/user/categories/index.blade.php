@@ -29,7 +29,24 @@
 				</div>
 			</div>
 			<div class="panel-body">
+			
+				<ul class="list-group">
+					@foreach($categories as $category)
+						<li class="list-group-item">
 				
+						{{$category -> name}}
+					<div class="pull-right">
+						<a href="{{route('categories.edit')}}" class="btn btn-default">
+							<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+								Edit
+						</a>
+						<a href="" class="btn btn-danger" data-method="delete" data-token="{{ csrf_token() }}">
+							<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							Delete
+						</a>
+					</div>	
+					@endforeach 
+				</ul>	
 			</div>
 		</div>
 	</div>

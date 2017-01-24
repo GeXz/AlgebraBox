@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers\User;
 
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Support\Facades\DB;
+use App\Models\Category;
 
 class CategoriesController extends Controller
 {
+	public function __construct()
+    {
+        // Middleware
+        $this->middleware('sentinel.auth');
+	}
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +23,9 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        return view('user.categories.index');
+		new Category;
+		$categories = DB::table('categories')->get();
+        return view('user.categories.index', ['categories'=>$categories]);
     }
 
     /**
@@ -24,7 +35,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        return view('user.categories.create');
+        return view('user.categories.create');	
     }
 
     /**
@@ -34,9 +45,17 @@ class CategoriesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+   
+   {
+		$this->validate($request, [ 
+            'name' => 'bail|required|max:100',
+		]);
+	
+	    $categories = new Category;
+		$categories->name = $request->category;
+		$categories->save();  
     }
+    
 
     /**
      * Display the specified resource.
@@ -46,7 +65,8 @@ class CategoriesController extends Controller
      */
     public function show($id)
     {
-        //
+		//  
+   
     }
 
     /**
