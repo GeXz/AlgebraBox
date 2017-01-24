@@ -19,7 +19,11 @@ Route::get('home', ['as' => 'home', 'uses' => 'User\HomeController@index']);
 //Categories page
 Route::group(['prefix' => 'user'], function () {
   Route::resource('categories', 'User\CategoriesController');
+  Route::get('index', ['as' => 'index', 'uses' => 'User\CategoriesController@index']);
+  Route::post('create', ['as' => 'create.category', 'uses' => 'User\CategoriesController@store']);
+  Route::get('edit', ['as' => 'categories.edit', 'uses' => 'User\CategoriesController@edit']); 
 });
+
 // Authorization
 Route::get('login', ['as' => 'auth.login.form', 'uses' => 'Auth\SessionController@getLogin']);
 Route::post('login', ['as' => 'auth.login.attempt', 'uses' => 'Auth\SessionController@postLogin']);
@@ -40,8 +44,6 @@ Route::post('password/reset/{code}', ['as' => 'auth.password.reset.attempt', 'us
 Route::get('password/reset', ['as' => 'auth.password.request.form', 'uses' => 'Auth\PasswordController@getRequest']);
 Route::post('password/reset', ['as' => 'auth.password.request.attempt', 'uses' => 'Auth\PasswordController@postRequest']);
 
-
-
 /*############# ADMIN ##############*/
 Route::group(['prefix' => 'admin'], function () {
   // Dashboard
@@ -51,3 +53,6 @@ Route::group(['prefix' => 'admin'], function () {
   // Roles
   Route::resource('roles', 'Admin\RoleController');
 });
+
+
+

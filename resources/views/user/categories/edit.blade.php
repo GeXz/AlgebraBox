@@ -3,6 +3,7 @@
 @section('title', 'Categories | AlgebraBox')
 
 @section('content')
+
 <div class="row">
   <ol class="breadcrumb">
     <li><a href="{{route('home')}}">Home</a></li>
@@ -21,24 +22,10 @@
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
 				<h3 class="pull-left panel-title">Categories</h3>
-				<div class="pull-right">
-					<a href="{{route('categories.create')}}">
-						<span class="pull-right glyphicon glyphicon-tag" aria-hidden="true"></span>
-						<span class="pull-right glyphicon glyphicon-plus" aria-hidden="true"></span>
-					</a>
-				</div>
 			</div>
 			<div class="panel-body">
-			
-			<ul class="list-group">
-				@foreach($categories as $category)
-					<li class="list-group-item">	
-					{{$category -> name}}
-					<div class="pull-right">
-						<a href="{{route('categories.edit')}}" class="btn btn-default"></a>
-					</div>
-				@endforeach 
-			</ul>						
+				
+			</div>
 		</div>
 	</div>
 </div>
