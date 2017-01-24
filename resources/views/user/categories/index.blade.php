@@ -29,21 +29,17 @@
 				</div>
 			</div>
 			<div class="panel-body">
-<<<<<<< HEAD
 			
 			<ul class="list-group">
 				@foreach($categories as $category)
-					<li class="list-group-item">	
+					<li class="list-group-item">
+				
 					{{$category -> name}}
 					<div class="pull-right">
-						<a href="{{route('categories.edit')}}" class="btn btn-default"></a>
-					</div>
+						<a href="{{route('categories.edit')}}" class="btn btn-default">
+                    </div>                   
 				@endforeach 
-			</ul>						
-=======
-				
-			</div>
->>>>>>> 782450502e9a4602bf19c4c6700b05f36b5721cc
+			</ul>	
 		</div>
 	</div>
 </div>

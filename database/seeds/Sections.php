@@ -12,25 +12,5 @@ class Sections extends Seeder
     public function run()
     {
         //
-		 DB::table('sections')->insert([
-		 [
-            'name' => 'images'
-         ],
-		 [
-		    'name' => 'documents'
-		 ],
-		 
-		 [
-		    'name' => 'musics'
-		 ],
-		 
-		 [
-		    'name' => 'videos'
-		 ]
-			
-        ]);
-		
-		
-		
     }
 }

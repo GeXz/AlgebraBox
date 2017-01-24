@@ -3,7 +3,6 @@
 @section('title', 'Categories | AlgebraBox')
 
 @section('content')
-
 <div class="row">
   <ol class="breadcrumb">
     <li><a href="{{route('home')}}">Home</a></li>

@@ -20,10 +20,11 @@
 	<div class="col-md-9">
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
-				<h3 class="pull-left panel-title">Create Category</h3>	
+				<h3 class="pull-left panel-title">Create Category</h3>
+				
 			</div>
 			<div class="panel-body">
-			
+				
 			<form accept-charset="UTF-8" role="form" method="post" action="{{ route('create.category') }}">
 				<div class="form-group">
 					<label for="formGroupExampleInput">Category Name</label>
@@ -35,7 +36,6 @@
 			 <a class="btn btn-primary" type="submit" role="button">Edit</a>
 			 <a class="btn btn-primary" type="submit" role="button">Delete</a>
 			<a href="{{route('index')}}" ><button type="button" class="btn btn-primary" id="create_category">Back</button></a>
-			</div>
 		</div>
 	</div>
 </div>
