@@ -20,18 +20,11 @@
 	<div class="col-md-9">
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
-<<<<<<< HEAD
-				<h3 class="pull-left panel-title">Create Category</h3>		
-			</div>
-			<div class="panel-body">
-
-=======
 				<h3 class="pull-left panel-title">Create Category</h3>
 				
 			</div>
 			<div class="panel-body">
-				
->>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
+	
 			<form accept-charset="UTF-8" role="form" method="post" action="{{ route('create.category') }}">
 				<div class="form-group">
 					<label for="formGroupExampleInput">Category Name</label>
@@ -39,18 +32,11 @@
 				</div>	
 			</form>
 			
-<<<<<<< HEAD
-			<a class="btn btn-primary" type="submit" role="button">Create</a>
-			<a class="btn btn-primary" type="submit" role="button">Edit</a>
-			<a class="btn btn-primary" type="submit" role="button">Delete</a>
+			 <a class="btn btn-primary" type="submit" role="button">Create</a>
+			  <a class="btn btn-primary" type="submit" role="button">Edit</a>
+			  <a class="btn btn-primary" type="submit" role="button">Delete</a>
 			<a href="{{route('index')}}" ><button type="button" class="btn btn-primary" id="create_category">Back</button></a>
 			</div>
-=======
-			 <a class="btn btn-primary" type="submit" role="button">Create</a>
-			 <a class="btn btn-primary" type="submit" role="button">Edit</a>
-			 <a class="btn btn-primary" type="submit" role="button">Delete</a>
-			<a href="{{route('index')}}" ><button type="button" class="btn btn-primary" id="create_category">Back</button></a>
->>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
 		</div>
 	</div>
 </div>

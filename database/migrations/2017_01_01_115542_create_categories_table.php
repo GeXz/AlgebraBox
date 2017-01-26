@@ -18,11 +18,6 @@ class CreateCategoriesTable extends Migration
 			$table->string('name');
 			$table->timestamps();
          
-<<<<<<< HEAD
-			$table->engine = 'InnoDB';
-			$table->unique('name');
-        });
-=======
 			
 		
 			$table->engine = 'InnoDB';
@@ -33,7 +28,6 @@ class CreateCategoriesTable extends Migration
         });
 		
 					
->>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
 			
 		 Schema::create('categories_user', function (Blueprint $table) {
             $table->integer('user_id')->unsigned();

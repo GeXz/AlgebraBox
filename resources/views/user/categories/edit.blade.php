@@ -21,16 +21,10 @@
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
 				<h3 class="pull-left panel-title">Categories</h3>
-<<<<<<< HEAD
 
 			</div>
 			<div class="panel-body">
-			
-=======
-			</div>
-			<div class="panel-body">
-				
->>>>>>> 2405146f2ca736a9b705733b6e9d047983c51929
+		
 			</div>
 		</div>
 	</div>
